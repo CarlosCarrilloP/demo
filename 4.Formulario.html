@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a mi WEB</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    
+
+</head>
+
+<body>
+    <header> <!--- Menu de navegación-->
+        <h1 id="Formulario">LMSGI - Práctica 1 - FORMULARIO</h1>
+        <h2>HTML: Texto - Enlaces - Listas - Imagenes y objetos</h2>
+        <h3>Mapa WEB</h3>
+        <nav class="nav"> <a href="1.Home.html">Home</a>| <a href="3.Tabla.html">Tabla</a> | <a
+                href="4.Formulario.html">Formulario</a> | <a href="5.How_to.html">How to</a> | <img
+                src="./media/google.png" width="50px" height="15px"
+                alt="Google"></nav>
+    </header>
+    <h3 class="formulario"> Formulario</h3>
+    <!------ Conectamos el formulario con el php para que nos mande el array-->
+    <form action="gestion.php" method ="post" class="container">
+        <fieldset>
+
+            <legend>Datos Personales</legend>
+            <label for="Nombre"> Nombre</label> <input type="text" name="Name" id="Name" placeholder="Nombre" required>
+            <br> <br>
+            <label for="Apellidos">Apellidos</label> <input type="text" name="Apellidos" id="Apellidos"
+                placeholder="Apellidos" required>
+            <br> <br>
+            <label for="Telefono">Telefono</label> <input type="tel" name="Telefono" id="Telefono" placeholder="016"required>
+            <br> <br>
+
+
+        </fieldset>
+        <fieldset>
+
+
+            <legend>Otros datos</legend>
+            <input type="radio" name="hm" value="h"required>Hombre
+
+            <input type="radio" name="hm" value="m" required>Mujer
+            <br> <br>
+            <input type="checkbox" checked name="Musica">Musica
+            <input type="checkbox" checked name="Juegos">Juegos
+            <br> <br>
+            Estás:<select name="so" id="so">
+                <option value="----selecciona---" >---selecciona---</option>
+                <option value="soltero">soltero/a</option>
+                <option value="casado">casado/a</option>
+                <option value="divorciado">divorciado/a</option>
+                <option value="viudo">viudo/a</option>
+            </select>
+            <br> <br> <!----- El primero solo puede contener imagenes y el segundo solo PDF-->
+            Subir archivos <input type="file" id="myimage" name="image">
+             <br> Subir archivos tipo imagen<input accept="image/*" type="file" name="imageFile" >
+            <br> <br>
+
+            <label for="Observaciones"><textarea name="Observaciones" cols="40" rows="5" placeholder="Observaciones"></textarea></label>
+            
+        </fieldset>
+        <input class="enviar" type="submit">
+        <input class="limpiar" type="reset" value="Limpiar">
+        
+        
+
+
+    </form>
+</body>
+
+</html>
